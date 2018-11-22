@@ -1,0 +1,65 @@
+I, [2018-11-22T15:12:02.651630 #941]  INFO -- Kitchen: -----> Starting Kitchen (v1.14.2)
+E, [2018-11-22T15:12:02.657066 #941] ERROR -- Kitchen: ------Exception-------
+E, [2018-11-22T15:12:02.657100 #941] ERROR -- Kitchen: Class: Kitchen::ClientError
+E, [2018-11-22T15:12:02.657115 #941] ERROR -- Kitchen: Message: Could not load the 'docker' driver from the load path. Please ensure that your driver is installed as a gem or included in your Gemfile if using Bundler.
+E, [2018-11-22T15:12:02.657128 #941] ERROR -- Kitchen: ----------------------
+E, [2018-11-22T15:12:02.657139 #941] ERROR -- Kitchen: ------Backtrace-------
+E, [2018-11-22T15:12:02.657149 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/driver.rb:48:in `rescue in for_plugin'
+E, [2018-11-22T15:12:02.657160 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/driver.rb:38:in `for_plugin'
+E, [2018-11-22T15:12:02.657171 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/config.rb:233:in `new_driver'
+E, [2018-11-22T15:12:02.657182 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/config.rb:246:in `new_instance'
+E, [2018-11-22T15:12:02.658186 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/config.rb:142:in `block in build_instances'
+E, [2018-11-22T15:12:02.658200 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/config.rb:141:in `map'
+E, [2018-11-22T15:12:02.658212 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/config.rb:141:in `with_index'
+E, [2018-11-22T15:12:02.658223 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/config.rb:141:in `build_instances'
+E, [2018-11-22T15:12:02.658233 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/config.rb:117:in `instances'
+E, [2018-11-22T15:12:02.658243 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/command.rb:112:in `filtered_instances'
+E, [2018-11-22T15:12:02.658254 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/command.rb:142:in `parse_subcommand'
+E, [2018-11-22T15:12:02.658264 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/command/action.rb:35:in `block in call'
+E, [2018-11-22T15:12:02.658275 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2018-11-22T15:12:02.658285 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/command/action.rb:34:in `call'
+E, [2018-11-22T15:12:02.658296 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/cli.rb:53:in `perform'
+E, [2018-11-22T15:12:02.658306 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/cli.rb:187:in `block (2 levels) in <class:CLI>'
+E, [2018-11-22T15:12:02.658316 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/thor-0.19.4/lib/thor/command.rb:27:in `run'
+E, [2018-11-22T15:12:02.658326 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/thor-0.19.4/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2018-11-22T15:12:02.658337 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/cli.rb:334:in `invoke_task'
+E, [2018-11-22T15:12:02.658347 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/thor-0.19.4/lib/thor.rb:369:in `dispatch'
+E, [2018-11-22T15:12:02.658357 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/thor-0.19.4/lib/thor/base.rb:444:in `start'
+E, [2018-11-22T15:12:02.658367 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/bin/kitchen:13:in `block in <top (required)>'
+E, [2018-11-22T15:12:02.658399 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/errors.rb:171:in `with_friendly_errors'
+E, [2018-11-22T15:12:02.658412 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/bin/kitchen:13:in `<top (required)>'
+E, [2018-11-22T15:12:02.658423 #941] ERROR -- Kitchen: /usr/bin/kitchen:21:in `load'
+E, [2018-11-22T15:12:02.658433 #941] ERROR -- Kitchen: /usr/bin/kitchen:21:in `<main>'
+E, [2018-11-22T15:12:02.658442 #941] ERROR -- Kitchen: ----End Backtrace-----
+E, [2018-11-22T15:12:02.658452 #941] ERROR -- Kitchen: ---Nested Exception---
+E, [2018-11-22T15:12:02.658462 #941] ERROR -- Kitchen: Class: LoadError
+E, [2018-11-22T15:12:02.658471 #941] ERROR -- Kitchen: Message: cannot load such file -- kitchen/driver/docker
+E, [2018-11-22T15:12:02.658481 #941] ERROR -- Kitchen: ----------------------
+E, [2018-11-22T15:12:02.658491 #941] ERROR -- Kitchen: ------Backtrace-------
+E, [2018-11-22T15:12:02.658501 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/driver.rb:48:in `rescue in for_plugin'
+E, [2018-11-22T15:12:02.658511 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/driver.rb:38:in `for_plugin'
+E, [2018-11-22T15:12:02.658525 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/config.rb:233:in `new_driver'
+E, [2018-11-22T15:12:02.658536 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/config.rb:246:in `new_instance'
+E, [2018-11-22T15:12:02.658546 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/config.rb:142:in `block in build_instances'
+E, [2018-11-22T15:12:02.658556 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/config.rb:141:in `map'
+E, [2018-11-22T15:12:02.658566 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/config.rb:141:in `with_index'
+E, [2018-11-22T15:12:02.658576 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/config.rb:141:in `build_instances'
+E, [2018-11-22T15:12:02.658587 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/config.rb:117:in `instances'
+E, [2018-11-22T15:12:02.658597 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/command.rb:112:in `filtered_instances'
+E, [2018-11-22T15:12:02.658607 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/command.rb:142:in `parse_subcommand'
+E, [2018-11-22T15:12:02.658617 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/command/action.rb:35:in `block in call'
+E, [2018-11-22T15:12:02.658627 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2018-11-22T15:12:02.658637 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/command/action.rb:34:in `call'
+E, [2018-11-22T15:12:02.658647 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/cli.rb:53:in `perform'
+E, [2018-11-22T15:12:02.658658 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/cli.rb:187:in `block (2 levels) in <class:CLI>'
+E, [2018-11-22T15:12:02.658668 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/thor-0.19.4/lib/thor/command.rb:27:in `run'
+E, [2018-11-22T15:12:02.658678 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/thor-0.19.4/lib/thor/invocation.rb:126:in `invoke_command'
+E, [2018-11-22T15:12:02.658688 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/cli.rb:334:in `invoke_task'
+E, [2018-11-22T15:12:02.658702 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/thor-0.19.4/lib/thor.rb:369:in `dispatch'
+E, [2018-11-22T15:12:02.658714 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/thor-0.19.4/lib/thor/base.rb:444:in `start'
+E, [2018-11-22T15:12:02.658727 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/bin/kitchen:13:in `block in <top (required)>'
+E, [2018-11-22T15:12:02.658738 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/errors.rb:171:in `with_friendly_errors'
+E, [2018-11-22T15:12:02.658760 #941] ERROR -- Kitchen: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/bin/kitchen:13:in `<top (required)>'
+E, [2018-11-22T15:12:02.658772 #941] ERROR -- Kitchen: /usr/bin/kitchen:21:in `load'
+E, [2018-11-22T15:12:02.658782 #941] ERROR -- Kitchen: /usr/bin/kitchen:21:in `<main>'
+E, [2018-11-22T15:12:02.658792 #941] ERROR -- Kitchen: ----End Backtrace-----

@@ -1,0 +1,65 @@
+I, [2018-11-22T15:11:39.738785 #917]  INFO -- default-centos-67: -----> Creating <default-centos-67>...
+I, [2018-11-22T15:11:39.839638 #917]  INFO -- default-centos-67: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.38/build?buildargs=%7B%7D&cachefrom=%5B%5D&cgroupparent=&cpuperiod=0&cpuquota=0&cpusetcpus=&cpusetmems=&cpushares=0&dockerfile=Dockerfile-kitchen20181122-917-kdtpv4&labels=%7B%7D&memory=0&memswap=0&networkmode=default&rm=1&session=yffr3dslmai8xphvm1ot93kj3&shmsize=0&target=&ulimits=null&version=1: dial unix /var/run/docker.sock: connect: permission denied
+E, [2018-11-22T15:11:39.851216 #917] ERROR -- default-centos-67: Create failed on instance <default-centos-67>.
+E, [2018-11-22T15:11:39.851380 #917] ERROR -- default-centos-67: ------Exception-------
+E, [2018-11-22T15:11:39.851407 #917] ERROR -- default-centos-67: Class: Kitchen::ShellOut::ShellCommandFailed
+E, [2018-11-22T15:11:39.851419 #917] ERROR -- default-centos-67: Message: Expected process to exit with [0], but received '1'
+---- Begin output of docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20181122-917-kdtpv4 . ----
+STDOUT: 
+STDERR: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.38/build?buildargs=%7B%7D&cachefrom=%5B%5D&cgroupparent=&cpuperiod=0&cpuquota=0&cpusetcpus=&cpusetmems=&cpushares=0&dockerfile=Dockerfile-kitchen20181122-917-kdtpv4&labels=%7B%7D&memory=0&memswap=0&networkmode=default&rm=1&session=yffr3dslmai8xphvm1ot93kj3&shmsize=0&target=&ulimits=null&version=1: dial unix /var/run/docker.sock: connect: permission denied
+---- End output of docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20181122-917-kdtpv4 . ----
+Ran docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20181122-917-kdtpv4 . returned 1
+E, [2018-11-22T15:11:39.851433 #917] ERROR -- default-centos-67: ----------------------
+E, [2018-11-22T15:11:39.851443 #917] ERROR -- default-centos-67: ------Backtrace-------
+E, [2018-11-22T15:11:39.851452 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/shell_out.rb:71:in `rescue in run_command'
+E, [2018-11-22T15:11:39.851462 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/shell_out.rb:59:in `run_command'
+E, [2018-11-22T15:11:39.851472 #917] ERROR -- default-centos-67: /home/chef/.chefdk/gem/ruby/2.3.0/gems/kitchen-docker-2.7.0/lib/kitchen/driver/docker.rb:156:in `docker_command'
+E, [2018-11-22T15:11:39.851482 #917] ERROR -- default-centos-67: /home/chef/.chefdk/gem/ruby/2.3.0/gems/kitchen-docker-2.7.0/lib/kitchen/driver/docker.rb:314:in `build_image'
+E, [2018-11-22T15:11:39.851491 #917] ERROR -- default-centos-67: /home/chef/.chefdk/gem/ruby/2.3.0/gems/kitchen-docker-2.7.0/lib/kitchen/driver/docker.rb:120:in `create'
+E, [2018-11-22T15:11:39.851501 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:460:in `public_send'
+E, [2018-11-22T15:11:39.851514 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:460:in `block in perform_action'
+E, [2018-11-22T15:11:39.851526 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:527:in `synchronize_or_call'
+E, [2018-11-22T15:11:39.851536 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:489:in `block in action'
+E, [2018-11-22T15:11:39.851546 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2018-11-22T15:11:39.851556 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:488:in `action'
+E, [2018-11-22T15:11:39.851565 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:460:in `perform_action'
+E, [2018-11-22T15:11:39.851580 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:370:in `create_action'
+E, [2018-11-22T15:11:39.851591 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2018-11-22T15:11:39.851601 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:358:in `each'
+E, [2018-11-22T15:11:39.851610 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2018-11-22T15:11:39.851623 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:135:in `converge'
+E, [2018-11-22T15:11:39.851633 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/command.rb:197:in `public_send'
+E, [2018-11-22T15:11:39.851642 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2018-11-22T15:11:39.851652 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2018-11-22T15:11:39.851661 #917] ERROR -- default-centos-67: ----End Backtrace-----
+E, [2018-11-22T15:11:39.851670 #917] ERROR -- default-centos-67: ---Nested Exception---
+E, [2018-11-22T15:11:39.851679 #917] ERROR -- default-centos-67: Class: Mixlib::ShellOut::ShellCommandFailed
+E, [2018-11-22T15:11:39.851688 #917] ERROR -- default-centos-67: Message: Expected process to exit with [0], but received '1'
+---- Begin output of docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20181122-917-kdtpv4 . ----
+STDOUT: 
+STDERR: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.38/build?buildargs=%7B%7D&cachefrom=%5B%5D&cgroupparent=&cpuperiod=0&cpuquota=0&cpusetcpus=&cpusetmems=&cpushares=0&dockerfile=Dockerfile-kitchen20181122-917-kdtpv4&labels=%7B%7D&memory=0&memswap=0&networkmode=default&rm=1&session=yffr3dslmai8xphvm1ot93kj3&shmsize=0&target=&ulimits=null&version=1: dial unix /var/run/docker.sock: connect: permission denied
+---- End output of docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20181122-917-kdtpv4 . ----
+Ran docker -H unix:///var/run/docker.sock build -f Dockerfile-kitchen20181122-917-kdtpv4 . returned 1
+E, [2018-11-22T15:11:39.851700 #917] ERROR -- default-centos-67: ----------------------
+E, [2018-11-22T15:11:39.851709 #917] ERROR -- default-centos-67: ------Backtrace-------
+E, [2018-11-22T15:11:39.851717 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/shell_out.rb:71:in `rescue in run_command'
+E, [2018-11-22T15:11:39.851727 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/shell_out.rb:59:in `run_command'
+E, [2018-11-22T15:11:39.851736 #917] ERROR -- default-centos-67: /home/chef/.chefdk/gem/ruby/2.3.0/gems/kitchen-docker-2.7.0/lib/kitchen/driver/docker.rb:156:in `docker_command'
+E, [2018-11-22T15:11:39.851745 #917] ERROR -- default-centos-67: /home/chef/.chefdk/gem/ruby/2.3.0/gems/kitchen-docker-2.7.0/lib/kitchen/driver/docker.rb:314:in `build_image'
+E, [2018-11-22T15:11:39.851755 #917] ERROR -- default-centos-67: /home/chef/.chefdk/gem/ruby/2.3.0/gems/kitchen-docker-2.7.0/lib/kitchen/driver/docker.rb:120:in `create'
+E, [2018-11-22T15:11:39.851764 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:460:in `public_send'
+E, [2018-11-22T15:11:39.851775 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:460:in `block in perform_action'
+E, [2018-11-22T15:11:39.851788 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:527:in `synchronize_or_call'
+E, [2018-11-22T15:11:39.851798 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:489:in `block in action'
+E, [2018-11-22T15:11:39.851808 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/2.3.0/benchmark.rb:293:in `measure'
+E, [2018-11-22T15:11:39.851817 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:488:in `action'
+E, [2018-11-22T15:11:39.851826 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:460:in `perform_action'
+E, [2018-11-22T15:11:39.851904 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:370:in `create_action'
+E, [2018-11-22T15:11:39.851915 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:359:in `block in transition_to'
+E, [2018-11-22T15:11:39.851924 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:358:in `each'
+E, [2018-11-22T15:11:39.851933 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:358:in `transition_to'
+E, [2018-11-22T15:11:39.851949 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/instance.rb:135:in `converge'
+E, [2018-11-22T15:11:39.851959 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/command.rb:197:in `public_send'
+E, [2018-11-22T15:11:39.851968 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/command.rb:197:in `run_action_in_thread'
+E, [2018-11-22T15:11:39.851978 #917] ERROR -- default-centos-67: /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/test-kitchen-1.14.2/lib/kitchen/command.rb:169:in `block (2 levels) in run_action'
+E, [2018-11-22T15:11:39.851987 #917] ERROR -- default-centos-67: ----End Backtrace-----
